@@ -4,7 +4,6 @@ import { todoRouter } from './routes/todo.route';
 import { userRouter } from './routes/user.route';
 import { connectDatabase } from './database';
 import defaults from '../config/defaults';
-import { User } from './models/user.model';
 import { authorize } from './controller/auth.controller';
 import { authRouter } from './routes/auth.route';
 import { postRouter } from './routes/post.route';

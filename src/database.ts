@@ -1,11 +1,8 @@
 import mongoose from 'mongoose';
-
-const dbConfig = {
-    url: 'mongodb://localhost:27017/todo'
-};
+import defaults from '../config/defaults';
 
 export const connectDatabase = () => {
-    mongoose.connect(dbConfig.url)
+    mongoose.connect(defaults.databaseConnectionString)
     const dataBase = mongoose.connection;
     dataBase.on("error", console.error.bind(console, "connection error: "));
     dataBase.once("open", function () {
