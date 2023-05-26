@@ -60,9 +60,9 @@ export const signUp = async (request: Request, response: Response) => {
         response.status(400).send("Name, User name and Password are mandatory");
     }
 
-    // if (await User.count() > 0 && await User.findOne({ userName })) {
-    //     response.status(409).send("A user with the same userName exists. Please use a different userName or login")
-    // }
+    if (await User.count() > 0 && await User.findOne({ userName })) {
+        response.status(409).send("A user with the same userName exists. Please use a different userName or login")
+    }
 
     try {
         const encryptedPassword = await bcrypt.hash(password, 10);

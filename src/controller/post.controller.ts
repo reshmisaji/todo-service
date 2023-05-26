@@ -14,7 +14,6 @@ export const create = async (request: Request, response: Response) => {
 
 export const getAll = async (_: Request, response: Response) => {
     const { _id: userId } = response.locals.currentUser;
-    console.log(userId)
     try {
         const posts = await Post.find({userId});
         response.send(posts);
