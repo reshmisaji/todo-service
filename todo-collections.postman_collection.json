@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "7c6bdc81-8ea8-4f93-920d-096d0a8ace18",
+		"name": "todo-collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27542736"
+	},
+	"item": [
+		{
+			"name": "signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"admin\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/user/signin",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"user1\",\n    \"userName\":\"user1\",\n    \"email\":\"user1@gmail.com\",\n    \"password\":\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/user",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjVlMjYxN2EwOGYzZmI3OWViMTgiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNjg1MDcxMzMwLCJleHAiOjE2ODUwNzE5MzB9.99-V1x3JSIGw6HjLiuF3Q-F1bPS7p6MKrXXMJiR7DgA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/users",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjVlMjYxN2EwOGYzZmI3OWViMTgiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNjg1MDcxMzMwLCJleHAiOjE2ODUwNzE5MzB9.99-V1x3JSIGw6HjLiuF3Q-F1bPS7p6MKrXXMJiR7DgA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/user/647025e2617a08f3fb79eb18",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"647025e2617a08f3fb79eb18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjcwMTYxN2EwOGYzZmI3OWViMWYiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNjg1MDcxNjE3LCJleHAiOjE2ODUwNzIyMTd9.bOmBAOXiAzTopkC5169gDBSt8EWE5RqQFw8DpbSsJok",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/user/64702701617a08f3fb79eb1f",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"64702701617a08f3fb79eb1f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTodo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDcxNzkxLCJleHAiOjE2ODUwNzIzOTF9.o5DIAIOhz4HMbh1mMa0bQ1IdnuNPSyOM85D1zgIPsbw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"This is the first todo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/todo",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTodos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDcxNzkxLCJleHAiOjE2ODUwNzIzOTF9.o5DIAIOhz4HMbh1mMa0bQ1IdnuNPSyOM85D1zgIPsbw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/todos",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTodoById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDcyNDEyLCJleHAiOjE2ODUwNzMwMTJ9.MXdgniFE9LIY5FaZ5dUIs-fW6kXPTde61CuxFBv55J8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/todo/647027da8b7a08757caa35cb",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"todo",
+						"647027da8b7a08757caa35cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTodoById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDcyNDEyLCJleHAiOjE2ODUwNzMwMTJ9.MXdgniFE9LIY5FaZ5dUIs-fW6kXPTde61CuxFBv55J8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/todo/647028ce617a08f3fb79eb2b",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"todo",
+						"647028ce617a08f3fb79eb2b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDcyNDEyLCJleHAiOjE2ODUwNzMwMTJ9.MXdgniFE9LIY5FaZ5dUIs-fW6kXPTde61CuxFBv55J8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"First post\",\n    \"body\":\"This is the very first post we are creating....\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPosts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDcyNDEyLCJleHAiOjE2ODUwNzMwMTJ9.MXdgniFE9LIY5FaZ5dUIs-fW6kXPTde61CuxFBv55J8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDcyNDEyLCJleHAiOjE2ODUwNzMwMTJ9.MXdgniFE9LIY5FaZ5dUIs-fW6kXPTde61CuxFBv55J8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/posts/64702b2f2ad28e5c14eb408e",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"64702b2f2ad28e5c14eb408e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePostById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDcyNDEyLCJleHAiOjE2ODUwNzMwMTJ9.MXdgniFE9LIY5FaZ5dUIs-fW6kXPTde61CuxFBv55J8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/posts/64702c342ad28e5c14eb409a",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"64702c342ad28e5c14eb409a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTodoById",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDcwMjU0NThiN2EwODc1N2NhYTM1YmEiLCJ1c2VyTmFtZSI6ImFkbWluIiwiaWF0IjoxNjg1MDczNDI2LCJleHAiOjE2ODUwNzQwMjZ9.6R9O20JCPzsD14xRhROMUjM7tWXRTybMe_aUqr3ixdM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"completed\":true,\n \"title\":\"hello dear\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todo-yjtd.onrender.com/api/todo/64702a87617a08f3fb79edb3",
+					"protocol": "https",
+					"host": [
+						"todo-yjtd",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"todo",
+						"64702a87617a08f3fb79edb3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
